@@ -8,15 +8,25 @@ public class ContadorDeCaracteres {
         int espacos = 0;
         int consoantes = 0;
 
-        for (int i = 0; i < texto.length(); i++) {
-            char c = texto.charAt(i);
-            if (c == ' ') {
-                espacos++;
-            } else if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||
-                    c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
-                vogais++;
-            } else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-                consoantes++;
+        texto = texto.toLowerCase();
+
+        for (char c : texto.toCharArray()) {
+            switch (c) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    vogais++;
+                    break;
+                case ' ':
+                    espacos++;
+                    break;
+                default:
+                    if ((c >= 'a' && c <= 'z')) {
+                        consoantes++;
+                    }
+                    break;
             }
         }
 
@@ -34,5 +44,6 @@ public class ContadorDeCaracteres {
         contaCaracteres(texto);
     }
 }
+
 
 

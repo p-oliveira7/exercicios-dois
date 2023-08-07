@@ -1,4 +1,4 @@
-package exercicios01.exercicio7;
+package exercicios01.exercicio07;
 
 public class DivisaoMultiplos {
     public static void main(String[] args) {

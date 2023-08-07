@@ -1,4 +1,4 @@
-package exercicios01.exercicio1;
+package exercicios01.exercicio01;
 
 class teste {
     public static void main( String args[] ){
